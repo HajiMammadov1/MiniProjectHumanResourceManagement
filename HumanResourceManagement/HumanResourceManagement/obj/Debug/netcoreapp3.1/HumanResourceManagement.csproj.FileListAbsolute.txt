@@ -1,0 +1,13 @@
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\bin\Debug\netcoreapp3.1\HumanResourceManagement.exe
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\bin\Debug\netcoreapp3.1\HumanResourceManagement.deps.json
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\bin\Debug\netcoreapp3.1\HumanResourceManagement.runtimeconfig.json
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\bin\Debug\netcoreapp3.1\HumanResourceManagement.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\bin\Debug\netcoreapp3.1\HumanResourceManagement.dll
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\bin\Debug\netcoreapp3.1\HumanResourceManagement.pdb
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\obj\Debug\netcoreapp3.1\HumanResourceManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\obj\Debug\netcoreapp3.1\HumanResourceManagement.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\obj\Debug\netcoreapp3.1\HumanResourceManagement.AssemblyInfo.cs
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\obj\Debug\netcoreapp3.1\HumanResourceManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\obj\Debug\netcoreapp3.1\HumanResourceManagement.dll
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\obj\Debug\netcoreapp3.1\HumanResourceManagement.pdb
+C:\Users\Admin\Desktop\HumanResourceManagementProject\HumanResourceManagement\HumanResourceManagement\obj\Debug\netcoreapp3.1\HumanResourceManagement.genruntimeconfig.cache
