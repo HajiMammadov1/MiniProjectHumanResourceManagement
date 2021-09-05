@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\HumanResourceManagementProject\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\MiniProjectHumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\HumanResourceManagementProject\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj": {
+    "C:\\Users\\Admin\\Desktop\\MiniProjectHumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\HumanResourceManagementProject\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\MiniProjectHumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj",
         "projectName": "HumanResourceManagement",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\HumanResourceManagementProject\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\MiniProjectHumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\HumanResourceManagementProject\\HumanResourceManagement\\HumanResourceManagement\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\MiniProjectHumanResourceManagement\\HumanResourceManagement\\HumanResourceManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

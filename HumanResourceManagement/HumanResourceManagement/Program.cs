@@ -65,7 +65,7 @@ namespace HumanResourceManagement
             
             
         }
-        //In this method we check whether entered department name is matching requiredment of task(department name must be at least 2 characters) or not.
+        //In this method we check whether entered department name matches requirement of task(department name must be at least 2 characters) or not.
         //And we check limit of worker,which must be at least 1.
         //Then we check salary limit,which must be at least 250.
         static void AddDepartment(ref HumanResourceManagerService humanService)
