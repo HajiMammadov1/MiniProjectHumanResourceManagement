@@ -24,9 +24,9 @@ namespace HumanResourceManagement
                 Console.WriteLine("8-Remove employee from department ");
                 Console.WriteLine("9-Quit");
 
-                string ans = Console.ReadLine();
+                string answer = Console.ReadLine();
 
-                switch (ans)
+                switch (answer)
                 {
                     case "1":
                         ShowDepartments(ref humanService);
@@ -55,14 +55,12 @@ namespace HumanResourceManagement
                     case "9":
                         return;
                     default:
-                        Console.WriteLine("There is no such a operation,please try again");
+                        Console.WriteLine("There is no such an operation,please try again");
                         break;
                 }
 
             } while (true);
 
-
-            
             
         }
         //In this method we check whether entered department name matches requirement of task(department name must be at least 2 characters) or not.
