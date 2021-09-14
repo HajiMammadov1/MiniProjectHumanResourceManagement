@@ -6,7 +6,6 @@ namespace HumanResourceManagement
 {
     class Program
     {
-        private static string salary;
 
         static void Main(string[] args)
         {
@@ -71,33 +70,39 @@ namespace HumanResourceManagement
             Console.WriteLine("Enter department name");
             DepartamentNameStart:
             string departmentName = Console.ReadLine();
-            if (departmentName.Length < 2)
+            try
             {
-                Console.WriteLine("Department name can't be less than 2 characters");
-                goto DepartamentNameStart;
-            }
-            Console.WriteLine("Assign the worker limit");
+                if (departmentName.Length < 2)
+                {
+                    Console.WriteLine("Department name can't be less than 2 characters");
+                    goto DepartamentNameStart;
+                }
+                Console.WriteLine("Assign the worker limit");
             WorkerLImitStart:
-            int worker = int.Parse(Console.ReadLine());
-            
-            if (worker < 1)
-            {
-                Console.WriteLine("Worker limit must be at least 1");
-                goto WorkerLImitStart;
-            }
-            Console.WriteLine("Enter salary limiti");
+                int worker = int.Parse(Console.ReadLine());
+
+                if (worker < 1)
+                {
+                    Console.WriteLine("Worker limit must be at least 1");
+                    goto WorkerLImitStart;
+                }
+                Console.WriteLine("Enter salary limiti");
             SalaryLimitStart:
-            int limit = int.Parse(Console.ReadLine());
-            if (limit < 250)
-            {
-                Console.WriteLine("Salary can't be less than 250");
-                goto SalaryLimitStart;
+                int limit = int.Parse(Console.ReadLine());
+                if (limit < 250)
+                {
+                    Console.WriteLine("Salary can't be less than 250");
+                    goto SalaryLimitStart;
+                }
+
+                Console.WriteLine("Operations were performed");
+
+                humanService.AddDepartment(departmentName, worker, limit);
             }
-
-            Console.WriteLine("Operations were performed");
-
-            humanService.AddDepartment(departmentName, worker, limit);
-            
+            catch
+            {
+                Console.WriteLine("Please,check the operation");
+            }
         }
 
         //This method requires department name and employee name
@@ -146,7 +151,6 @@ namespace HumanResourceManagement
                             }
                             while (!int.TryParse(typeStr, out typeNum) || typeNum < 0 || typeNum >= positionName.Length);
                             PositionType positionType = (PositionType)(typeNum - 1);
-
                             humanService.EditEmployee(nomre, newSalary, positionType);
 
                         }
@@ -170,48 +174,55 @@ namespace HumanResourceManagement
 
             Console.WriteLine("Enter salary");
             int salary = int.Parse(Console.ReadLine());
-            
-            if (salary > 250)
+            try
             {
-                //Console.WriteLine("Salary amount is sufficient");
-            }
-            else
-            {
-                Console.WriteLine("Salary amount isn't sufficient. " + "Enter right amount of salary!");
-            }
-            
-            Console.WriteLine("Select position:");
-
-            string[] positionName = Enum.GetNames(typeof(PositionType));
-            for (int i = 0; i < positionName.Length; i++)
-            {
-                Console.WriteLine($"{i+1}-{positionName[i]}");
-                
-                
-            }
-
-            string typeStr;
-            int typeNum;
-            do
-            {
-                Console.WriteLine("Select");
-                typeStr = Console.ReadLine();
-            }
-            while (!int.TryParse(typeStr, out typeNum) || typeNum < 0 || typeNum > positionName.Length);
-            PositionType positionType = (PositionType)typeNum;
-            
-            Console.WriteLine( "To which department do you want to add employee?");
-            string elavedep = Console.ReadLine();
-
-            foreach (var item in humanService.Departments)
-            {
-                if (item.Name == elavedep)
+                if (salary > 250)
                 {
-                    humanService.AddEmployee(name, positionType, salary, item);
-                    return;
+                    //Console.WriteLine("Salary amount is sufficient");
                 }
+                else
+                {
+                    Console.WriteLine("Salary amount isn't sufficient. " + "Enter right amount of salary!");
+                }
+
+                Console.WriteLine("Select position:");
+
+                string[] positionName = Enum.GetNames(typeof(PositionType));
+                for (int i = 0; i < positionName.Length; i++)
+                {
+                    Console.WriteLine($"{i + 1}-{positionName[i]}");
+
+
+                }
+
+                string typeStr;
+                int typeNum;
+                do
+                {
+                    Console.WriteLine("Select");
+                    typeStr = Console.ReadLine();
+                }
+                while (!int.TryParse(typeStr, out typeNum) || typeNum < 0 || typeNum > positionName.Length);
+                PositionType positionType = (PositionType)typeNum;
+
+                Console.WriteLine("To which department do you want to add employee?");
+                string elavedep = Console.ReadLine();
+
+                foreach (var item in humanService.Departments)
+                {
+                    if (item.Name == elavedep)
+                    {
+                        humanService.AddEmployee(name, positionType, salary, item);
+                        return;
+                    }
+                }
+                Console.WriteLine("There is no such a department");
             }
-            Console.WriteLine("There is no such a department");  
+            catch
+            {
+                Console.WriteLine("Please,check the operation");
+            }
+           
         }
 
         //This method requires department from user,checks entered department,then checks employee and then shows employees of the entered department.
@@ -274,6 +285,10 @@ namespace HumanResourceManagement
         //This method checks whether is there any department in the system or not,if yes shows department name,number of employees,average salary of the employee in the department.
         private static void ShowDepartments(ref HumanResourceManagerService humanService)
         {
+
+          try
+            { 
+             
             if (humanService.Departments.Length == 0)
             {
                 Console.WriteLine("There is no department");
@@ -291,6 +306,13 @@ namespace HumanResourceManagement
                     
                 }
             }
+
+            }
+           catch
+               {
+                Console.WriteLine("Please,add new employee");
+               }
+            
             
         }
 

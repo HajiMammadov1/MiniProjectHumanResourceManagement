@@ -82,34 +82,44 @@ namespace HumanResourceManagement.Services
         public void RemoveEmployee(string departmentName, string fullname)
         {
             Department department = null;
-            foreach (Department item in _departments)
+            try
             {
-                if (item.Name.ToLower() == departmentName.ToLower())
+                foreach (Department item in _departments)
                 {
-                    department = item;
-                    break;
-                }
-            }
-
-            Employee employee = null;
-
-            if (department != null)
-            {
-                foreach (var item in department.employees)
-                {
-                    if (item.FullName.ToLower() == fullname.ToLower())
+                    if (item.Name.ToLower() == departmentName.ToLower())
                     {
-                        employee = item;
+                        department = item;
                         break;
                     }
                 }
-            }
-            if (employee != null)
-            {
-                int index = Array.IndexOf(department.employees, employee);
 
-                Array.Clear(department.employees, index, 1);
+                Employee employee = null;
+
+                if (department != null)
+                {
+                    foreach (var item in department.employees)
+                    {
+                        if (item.FullName.ToLower() == fullname.ToLower())
+                        {
+                            employee = item;
+                            break;
+                        }
+                    }
+                }
+                if (employee != null)
+                {
+                    int index = Array.IndexOf(department.employees, employee);
+
+                    Array.Clear(department.employees, index, 1);
+                }
+
             }
+            catch
+            {
+                Console.WriteLine("Please,check the opeartion again");
+            }
+            
+            
 
         }
 
