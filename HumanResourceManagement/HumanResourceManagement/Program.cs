@@ -92,6 +92,7 @@ namespace HumanResourceManagement
                 if (limit < 250)
                 {
                     Console.WriteLine("Salary can't be less than 250");
+                    Console.WriteLine("The employee can not be added to the department.");
                     goto SalaryLimitStart;
                 }
 
@@ -117,7 +118,7 @@ namespace HumanResourceManagement
            humanService.RemoveEmployee(departmentName, employeeName);
         }
 
-        //This method checks salary,requieres from user to enter number of the employee,select new position and ne salary.
+        //This method checks salary,requieres from user to enter number of the employee,select new position and new salary.
         private static void EditEmployee(ref HumanResourceManagerService humanService)
         {
             Console.WriteLine("Enter the number of the employee");
