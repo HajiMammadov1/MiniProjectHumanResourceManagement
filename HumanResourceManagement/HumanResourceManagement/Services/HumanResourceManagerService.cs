@@ -124,7 +124,7 @@ namespace HumanResourceManagement.Services
         }
 
         //This method checks employee number and assign new salary and position.
-        public void EditEmployee(string no, int newSalary, PositionType position)
+        public void EditEmployee(string no, int newSalary, PositionType positiontype)
         {
             foreach (Department department in _departments)
             {
@@ -133,13 +133,13 @@ namespace HumanResourceManagement.Services
                     if (employee.No==no)
                     {
                         employee.Salary = newSalary;
-                        employee.Position = position;
+                        employee.Position = positiontype;
                         Console.WriteLine("Edit were performed");
                         return;
                     }
                 }
             }
-            Console.WriteLine($" New position: {position} New salary: { newSalary}");
+            Console.WriteLine($" New position: {positiontype} New salary: { newSalary}");
         }
     }
 }

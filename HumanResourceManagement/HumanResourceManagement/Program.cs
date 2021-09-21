@@ -150,8 +150,8 @@ namespace HumanResourceManagement
                                 Console.WriteLine("Select");
                                 typeStr = Console.ReadLine();
                             }
-                            while (!int.TryParse(typeStr, out typeNum) || typeNum < 0 || typeNum >= positionName.Length);
-                            PositionType positionType = (PositionType)(typeNum - 1);
+                            while (!int.TryParse(typeStr, out typeNum) || typeNum < 0 || typeNum > positionName.Length);
+                            PositionType positionType = (PositionType)(typeNum);
                             humanService.EditEmployee(nomre, newSalary, positionType);
 
                         }
